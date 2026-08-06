@@ -1,8 +1,8 @@
 class AutoAirdropCli < Formula
   desc "AirDrop files to a named device without manual clicks"
   homepage "https://github.com/owensantoso/auto-airdrop-cli"
-  url "https://github.com/owensantoso/auto-airdrop-cli/archive/refs/tags/v0.3.0.tar.gz"
-  sha256 "19c9482aeb75d3419e635e9819e6628eec65ce0072937ca7c4eba766b7aacc09"
+  url "https://github.com/owensantoso/auto-airdrop-cli/archive/refs/tags/v0.3.1.tar.gz"
+  sha256 "a33f722bbc10ca8c445cd2c47751ea5defacd1640df21083cabb726321d8af00"
   license "MIT"
 
   depends_on :macos
@@ -15,7 +15,7 @@ class AutoAirdropCli < Formula
   end
 
   test do
-    assert_match "auto-airdrop 0.3.0", shell_output("#{bin}/auto-airdrop --version")
+    assert_match "auto-airdrop 0.3.1", shell_output("#{bin}/auto-airdrop --version")
     assert_match "Usage: auto-airdrop [OPTIONS] FILE DEVICE_NAME", shell_output("#{bin}/auto-airdrop --help")
   end
 end
